@@ -11,4 +11,16 @@
     <bean id="sightingsRepository"
           class="com.example.repository.SightingsRepository"/>
 
+    <!--Services-->
+    <bean id="expeditionsService"
+          class="com.example.service.ExpeditionsService">
+        <property name="expeditionsRepository" ref="expeditionsRepository"/>
+    </bean>
+
+    <bean id="sightingsService"
+          class="com.example.service.SightingsService">
+        <property name="expeditionsRepository" ref="expeditionsRepository"/>
+        <property name="sightingsRepository" ref="sightingsRepository"/>
+    </bean>
+
 </beans>

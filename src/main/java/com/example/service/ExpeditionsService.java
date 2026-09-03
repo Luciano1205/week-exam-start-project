@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.model.Expeditions;
 import com.example.repository.ExpeditionsRepository;
 
 import java.util.List;
@@ -13,6 +14,8 @@ public class ExpeditionsService {
 
     }
 
-    public List<Exception>
+    public List<Expeditions> getExpeditionsList(){
+        return expeditionsRepository.findAll();
+    }
 
 }

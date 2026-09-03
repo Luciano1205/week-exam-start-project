@@ -4,4 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--Repositorios-->
+    <bean id="expeditionsRepository"
+          class="com.example.repository.ExpeditionsRepository"/>
+
+    <bean id="sightingsRepository"
+          class="com.example.repository.SightingsRepository"/>
+
 </beans>

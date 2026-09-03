@@ -12,7 +12,7 @@ public class ExpeditionsRepository {
     public ExpeditionsRepository(){
 
         save(new Expeditions( 1, "Selva Amazonica", "A00405149" , "Amazonía", "Rio Amazonas", "Luciano", "3/9/2026", "4/9/2026", "Active"));
-        save(new Expeditions( 1, "Sierra Nevada", "A00405140" , "Sierra", "Meseta de la Sierra", "Karen", "7/9/2026", "9/9/2026", "Active"));
+        save(new Expeditions( 2, "Sierra Nevada", "A00405140" , "Sierra", "Meseta de la Sierra", "Karen", "7/9/2026", "9/9/2026", "Active"));
 
 
     }

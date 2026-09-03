@@ -1,4 +1,18 @@
 package com.example.service;
 
+import com.example.repository.ExpeditionsRepository;
+
+import java.util.List;
+
 public class ExpeditionsService {
+
+    private ExpeditionsRepository expeditionsRepository;
+
+    public void setExpeditionsRepository(ExpeditionsRepository expeditionsRepository){
+        this.expeditionsRepository = expeditionsRepository;
+
+    }
+
+    public List<Exception>
+
 }

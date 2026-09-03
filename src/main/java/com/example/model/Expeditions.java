@@ -1,5 +1,7 @@
 package com.example.model;
 
+
+
 public class Expeditions {
 
     private Integer id;
@@ -96,4 +98,18 @@ public class Expeditions {
     public void setEstate(String estate) {
         this.estate = estate;
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + id +
+                " | Nombre: " + name +
+                " | Codigo: " + code +
+                " | Region: " + region+
+                " | Campamento: " + baseCamp+
+                " | Lider: " + leader+
+                " | Fecha Inico: " + startDate+
+                " | Fecha Final: " + endDate+
+                " | Estado: " + estate;
+    }
+
 }

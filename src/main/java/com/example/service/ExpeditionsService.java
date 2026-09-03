@@ -18,4 +18,9 @@ public class ExpeditionsService {
         return expeditionsRepository.findAll();
     }
 
+
+    public String save(Integer id, String name, String code, String region, String baseCamp, String leader, String startDate, String endDate, String estate) {
+        expeditionsRepository.save(new Expeditions(id, name, code, region, baseCamp, leader, startDate, endDate, estate));
+        return "OK";
+    }
 }

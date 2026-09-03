@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+
 @WebServlet("/expeditions")
 public class ServletExpeditions extends HttpServlet {
 
@@ -33,6 +34,26 @@ public class ServletExpeditions extends HttpServlet {
         }
         resp.getWriter().println("</ul>");
     }
-    
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Integer id = Integer.valueOf(req.getParameter("id"));
+        String name = req.getParameter("name");
+        String code = req.getParameter("code");
+        String region = req.getParameter("region");
+        String baseCamp = req.getParameter("baseCamp");
+        String leader = req.getParameter("leader");
+        String startDate = req.getParameter("startDate");
+        String endDate = req.getParameter("endDate");
+        String estate = req.getParameter("estate");
+
+        String result = expeditionsService.save(id, name, code, region, baseCamp, leader, startDate, endDate, estate);
+
+        if (result.equals("OK")) {
+            resp.getWriter().println("OK");
+        }else  {
+            resp.getWriter().println("ERROR");
+        }
+    }
 
 }
